@@ -1,0 +1,59 @@
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.wrapper-portfolio{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.section-heading {
+    position: relative;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $main-color;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+
+    &--right {
+        text-align: right;
+    }
+}
+
+.section-padding {
+    padding: 4em 2em;
+}
+
+@media (min-width: 768px) {
+    .section-heading {
+        font-size: 3.6rem;
+
+    }
+
+    .section-padding {
+        padding: 3em 2em;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .section-heading {
+        text-align: left;
+        font-size: 4.5rem;
+
+        &--right {
+            text-align: right;
+        }
+
+    }
+
+    .section-padding {
+        padding: 3em 2em;
+    }
+
+}

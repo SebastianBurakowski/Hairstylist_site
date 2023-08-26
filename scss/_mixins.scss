@@ -1,0 +1,23 @@
+@mixin heroImages($bgImg) {
+    background-image: $grey-gradient, url($bgImg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+@mixin burgerBtn {
+    position: absolute;
+    right: 0;
+    content: '';
+    height: 3px;
+    background-color: $pure-white;
+    transition: width .3s;
+}
+
+@mixin contactForms {
+    margin-bottom: 1em;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.5rem;
+}
