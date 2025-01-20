@@ -5,7 +5,6 @@ const navBtnBars = document.querySelector('.burger-btn__bars')
 const footerYear = document.querySelector('.footer__year')
 const sectionHeader = document.querySelector('.header')
 const sectionContact = document.querySelector('.contact')
-const sectionHero = document.querySelector('.hero-section')
 const sectionOffers = document.querySelector('.offers')
 
 const submitBtn = document.querySelector('.contact__form-btn')
@@ -37,17 +36,13 @@ function showItems() {
     let scroll = window.scrollY
     const headerHeight = sectionHeader.offsetHeight
 
-    const heroFromTop = sectionHero.offsetTop;
+
     const offerFromTop = sectionOffers.offsetTop;
     const contactFromTop = sectionContact.offsetTop
 
 
     if (headerHeight - 13 < scroll) {
         navBtnBars.classList.add('black-bars-color')
-    }
-
-    if (scroll > heroFromTop - 13) {
-        navBtnBars.classList.remove('black-bars-color')
     }
 
 

@@ -1,4 +1,4 @@
-//font-family: 'Rajdhani',sans-serif;
+//font-family: "Dosis",sans-serif; font-family: "Zeyada", cursive;
 
 
 @import './colors';
@@ -15,7 +15,7 @@
 }
 
 html {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: "Zeyada", cursive;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
@@ -23,8 +23,6 @@ html {
 body {
     font-size: 1.6rem;
 }
-
-
 
 
 
@@ -97,7 +95,11 @@ body {
 
 //HEADER
 
+
 .header {
+
+
+    z-index: 100;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -107,10 +109,20 @@ body {
     text-align: center;
     width: 100%;
     height: 100vh;
-    @include heroImages('../img/header_img.jpg');
+    background-image: $grey-gradient-solid;
+
+    &__video {
+
+        background-color: black;
+        position: absolute;
+        opacity: 0.4;
+        z-index: -1;
+    }
+
+
 
     &__heading {
-        font-family: 'Dancing Script', cursive;
+
         font-weight: normal;
         font-size: 4rem;
         padding: .5em 0;
@@ -118,7 +130,8 @@ body {
     }
 
     &__text {
-        font-family: 'Rajdhani', sans-serif;
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         font-size: 2rem;
         letter-spacing: 10px;
         text-transform: uppercase;
@@ -131,14 +144,14 @@ body {
         letter-spacing: 1px;
         width: 150px;
         color: $light-white;
-        font-size: 1.8rem;
+        font-size: 2rem;
         background-color: transparent;
-        padding: 0.5em 1em;
+        padding: 0.6em 1.2em;
         text-decoration: none;
         text-transform: uppercase;
         border: 1px solid $main-color;
         border-radius: 8px;
-        transition: background-color .5s;
+        transition: background-color 1s;
 
         &:hover {
             background-color: $button-color-hover;
@@ -169,7 +182,7 @@ body {
     justify-content: center;
     align-items: center;
     background-image: $brown-gradient-solid;
-    z-index: 100;
+    z-index: 150;
     transform: translateY(-120%);
     transition: transform 1s cubic-bezier(.17, .67, 1, 1.23);
 
@@ -181,7 +194,7 @@ body {
         letter-spacing: 1px;
         text-align: center;
         font-size: 2rem;
-        font-family: 'Rajdhani', sans-serif;
+
         position: relative;
         display: block;
         text-decoration: none;
@@ -223,13 +236,13 @@ body {
 
         &-img {
             img {
-                scale: 0;
+
                 margin-top: 3.5em;
                 width: 260px;
                 height: 400px;
                 border: none;
                 border-radius: 8px;
-                transition: 2s;
+                transition: 3s;
                 box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.2);
 
             }
@@ -238,50 +251,29 @@ body {
     }
 
     &__title {
-        margin: 2em 0;
         text-align: center;
-        font-size: 2rem;
 
     }
 
     &__text {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         letter-spacing: 1px;
-        font-size: 1.6rem;
+        font-size: 2rem;
         padding: 0 .5em;
     }
 
-    .activeAboutPhoto {
-        scale: 1;
-    }
 
 
 }
 
 
-
-//HERO-IMG
-
-.hero-img {
-    position: relative;
-    padding: 10em 2em;
-    @include heroImages('../img/hero_small.jpg');
-    background-position: left;
-    text-align: center;
-    color: $pure-white;
-    overflow: hidden;
-
-    &__text {
-        font-family: 'Rajdhani', sans-serif;
-        font-size: 1.6rem;
-
-    }
-
-}
 
 //OFFERS
 
 .offers {
     background-image: $brown-gradient;
+
 
     &__box {
 
@@ -292,6 +284,8 @@ body {
         align-items: center;
 
         &-list {
+            font-family: "Dosis", sans-serif;
+            font-weight: lighter;
             padding-bottom: 1em;
             text-align: center;
             margin: 0.5em 0;
@@ -299,12 +293,14 @@ body {
             font-size: 1.2rem;
 
             a {
+
                 text-decoration: none;
                 color: $main-color;
                 cursor: pointer;
             }
 
             &-item {
+
                 border-bottom: 1px solid black;
                 letter-spacing: 1px;
                 padding: 1em 0em;
@@ -313,10 +309,13 @@ body {
     }
 
     span {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         font-size: 1rem;
         margin-top: 1em;
 
         a {
+
             color: $main-color;
             text-decoration: none;
             text-transform: uppercase;
@@ -329,6 +328,8 @@ body {
 //PORTFOLIO
 .portfolio {
     &__box {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         display: flex;
         overflow: hidden;
         flex-direction: column;
@@ -352,7 +353,7 @@ body {
 
         a {
             text-decoration: none;
-            font-family: 'Dancing Script', cursive;
+
             font-size: 2.5rem;
             color: $dark;
 
@@ -385,6 +386,7 @@ body {
 }
 
 .reviews {
+
     a {
         text-decoration: none;
         color: $dark;
@@ -394,6 +396,7 @@ body {
     &__box {
 
         height: 350px;
+
         position: relative;
         margin: 2em;
         padding: 1em;
@@ -412,17 +415,76 @@ body {
 
         &-title {
             text-align: center;
-            font-family: 'Dancing Script', cursive;
+
             padding: .5em 0;
             font-size: 3rem;
         }
 
         &-text {
+            font-family: "Dosis", sans-serif;
+            font-weight: lighter;
             font-size: 1.6rem;
         }
+
     }
 
 
+}
+
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: $brown-gradient;
+    text-align: center;
+    padding: 2em 4em;
+
+    &__video {
+        width: 27%;
+        height: 27%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px rgba($color: #2e2e2e2e, $alpha: 0.5);
+    }
+
+    &__text {
+        position: absolute;
+        left: 200px;
+        top: 550px;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__text2 {
+        position: absolute;
+        right: 200px;
+        top: 550px;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    &__text3 {
+        position: absolute;
+        left: 50px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+
+    }
+
+
+
+    &__text5 {
+        position: absolute;
+        right: 70px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+
+    }
 }
 
 //CONTACT
@@ -456,6 +518,8 @@ body {
     }
 
     &__form-label {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         color: $pure-white;
         font-size: 1.8rem;
         margin-bottom: 0.5em;
@@ -480,6 +544,8 @@ body {
     }
 
     &__form-privacy {
+        font-family: "Dosis", sans-serif;
+        font-weight: lighter;
         color: $pure-white;
     }
 
@@ -584,7 +650,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background-color: $dark;
+    background-color: black;
     color: $light-white;
 
     &__credits {
@@ -602,34 +668,36 @@ body {
 }
 
 
-
-
-//RULES
 .rules {
-    background-image: $brown-gradient;
-    width: 100%;
-    height: 120vh;
+    &__header {
+        text-align: center;
+        font-size: 7rem;
+    }
 
     &__list {
-        font-size: 1.9rem;
+        font-size: 3rem;
 
         li {
-            padding: 0.5em 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            font-family: "Dosis", sans-serif;
+            font-weight: lighter;
         }
-
-
 
     }
 
     a {
         display: block;
-        font-size: 1.8rem;
+        margin-top: 100px;
+        font-size: 2.2rem;
         text-decoration: none;
-        color: $main-color;
-        cursor: pointer;
-        padding: 1em 1em;
+        letter-spacing: 1px;
+        color: $dark;
+        font-weight: bold;
     }
 }
+
+
 
 
 // -------MEDIA---------
@@ -1014,10 +1082,6 @@ body {
 
 
 
-//---rules---//
-.rules {
-    height: 100vh;
-}
 
 
 @media (min-width : 1100px) {
